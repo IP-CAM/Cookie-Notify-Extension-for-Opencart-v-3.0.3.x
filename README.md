@@ -9,18 +9,18 @@
 
 <p float="center">
   <img src="screenshots/imagem.jpg" width="429" />
-</p><br><br>
+</p>
 
 
 ## Características Principais
 
 * Responsivo.
-* Funciona com qualquer tema. <br>
+* Funciona com qualquer tema.
 
 
 ## Como usar
 
-Simplesmente, clone ou faça o download do repositório. Na administração do seu Opencart, utilize o menu "extensões", vá em instalador e faça o upload do arquivo "opencart-cookie.ocmod.zip".<br>
+Simplesmente, clone ou faça o download do repositório. Na administração do seu Opencart, utilize o menu "extensões", vá em instalador e faça o upload do arquivo "opencart-cookie.ocmod.zip".
 
 
 ## Licença
