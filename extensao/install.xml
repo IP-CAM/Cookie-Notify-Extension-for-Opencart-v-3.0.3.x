@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+   <name>Opencart Cookie</name>
+   <code>opencart-cookie</code>
+   <version>1.0.3</version>
+   <author>Thiago Araujo</author>
+   <link>https://www.graficaellus.com/thiago-araujo</link>
+   <file path="catalog/view/theme/*/template/common/footer.twig">
+      <operation>
+         <search>
+            <![CDATA[</html>]]>
+         </search>
+         <add position="before">
+            <![CDATA[
+               <div id="oc-cookie" class="oc-cookie-notify">
+               <div class="container">
+               <div class="oc-cookie-bl-clm oc-cookie-ct">
+               <div class="oc-cookie-cnt">Este site armazena cookies em seu computador. Para saber mais sobre os cookies que usamos, consulte nossa <a href="privacy" target="_blank">Política de Cookies.</a>.</div></div>
+               <button class="oc-cookie-act float-right" onclick="acceptCookie();">Entendi!</button><button class="oc-cookie-cls" onclick="myFunction()" >X</button>
+               </div>
+               </div>
+               <style>
+               .oc-cookie-notify {
+               position: fixed;
+               left: 0;
+               bottom: 0;
+               z-index: 999999;
+               color: #fff;
+               visibility: hidden;
+               }
+               
+               .oc-cookie-notify a:hover {
+               color: #fff;
+               }
+               
+               @media (max-width:479.98px) {
+               .oc-cookie-notify>div {
+               -webkit-box-orient: vertical;
+               -webkit-box-direction: normal;
+               -ms-flex-direction: column;
+               flex-direction: column;
+               }
+               }
+               
+               @media (max-width:689.98px) {
+               .oc-cookie-notify {
+               right: 0;
+               }
+               .oc-cookie-notify>div {
+               display: -webkit-box;
+               display: -ms-flexbox;
+               display: flex;
+               -webkit-box-align: center;
+               -ms-flex-align: center;
+               align-items: center;
+               padding-top: 15px;
+               padding-bottom: 15px;
+               }
+               }
+               
+               @media (max-width:689.98px) {
+               .oc-cookie-notify {
+               background: #fff;
+               }
+               }
+               
+               @media (min-width:690px) {
+               .oc-cookie-notify {
+               padding: 0 25px 25px 25px
+               }
+               .oc-cookie-notify .oc-cookie-cnt {
+               margin-bottom: 15px;
+               }
+               }
+               
+               .oc-cookie-notify .container {
+               position: relative;
+               }
+               
+               @media (max-width:689.98px) {
+               .oc-cookie-notify .container {
+               width: 88%;
+               margin: 0 auto;
+               }
+               }
+               
+               @media (min-width:690px) {
+               .oc-cookie-notify .container {
+               background: #fdfdfd;
+               -webkit-box-shadow: 0 5px 30px -5px rgba(34, 56, 101, .15);
+               box-shadow: 0 5px 30px -5px rgba(34, 56, 101, .15);
+               padding: 25px;
+               border-radius: 3px;
+               max-width: 430px;
+               min-height: 130px;
+               }
+               }
+               
+               .oc-cookie-notify .oc-cookie-cnt {
+               font-family:inherit;
+               color: #000;
+               line-height: 1.4;
+               }
+               
+               .oc-cookie-notify .oc-cookie-cnt a {
+               text-decoration: none;
+               color: #115cfa;
+               }
+               
+               @media (max-width:479.98px) {
+               .oc-cookie-notify .oc-cookie-cnt {
+               text-align: center;
+               margin-bottom: 15px;
+               }
+               }
+               
+               @media (max-width:689.98px) {
+               .oc-cookie-notify .oc-cookie-cnt {
+               font-size: 12px
+               }
+               }
+               
+               @media (min-width:690px) {
+               .oc-cookie-notify .oc-cookie-cnt {
+               font-size: 13px;
+               }
+               }
+               
+               .oc-cookie-notify .oc-cookie-act {
+               color: #fff;
+               background: #3399ff;
+               border: 0;
+               padding: 0 20px;
+               height: 35px;
+               border-radius: 3px;
+               cursor: pointer;
+               text-transform: capitalize;
+               --buttonShadow: none;
+               --buttonTransform: none;
+               }
+               
+               .oc-cookie-notify .oc-cookie-act:hover {
+               background: #004080;
+               }
+               
+               @media (max-width:479.98px) {
+               .oc-cookie-notify .oc-cookie-act {
+               width: 100%;
+               }
+               }
+               
+               @media (min-width:480px) and (max-width:689.98px) {
+               .oc-cookie-notify .oc-cookie-act {
+               margin-left: 20px;
+               }
+               }
+               
+               .oc-cookie-notify .oc-cookie-cls {
+               color: #000 !important;
+               position: absolute;
+               top: 0;
+               right: 0;
+               border: 0;
+               display: -webkit-box;
+               display: -ms-flexbox;
+               display: flex;
+               -webkit-box-align: center;
+               -ms-flex-align: center;
+               align-items: center;
+               -webkit-box-pack: center;
+               -ms-flex-pack: center;
+               justify-content: center;
+               font-size: 17px;
+               width: 45px;
+               height: 45px;
+               padding: 0;
+               opacity: .5;
+               color: inherit;
+               cursor: pointer;
+               -webkit-appearance: none;
+               -moz-appearance: none;
+               appearance: none;
+               background: 0 0;
+               -webkit-transition: opacity .2s ease;
+               transition: opacity .2s ease;
+               }
+               
+               .oc-cookie-notify .oc-cookie-cls:focus {
+               outline: 0;
+               }
+               
+               .oc-cookie-notify .oc-cookie-cls:hover {
+               opacity: 1;
+               }
+               
+               @media (max-width:689.98px) {
+               .oc-cookie-notify .oc-cookie-cls {
+               display: none;
+               }
+               }
+               </style>
+               <script>
+               function acceptCookie() {
+                     document.cookie = "cookieaccepted=1; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/", document.getElementById("oc-cookie").style.visibility = "hidden"
+                     }
+                     document.cookie.indexOf("cookieaccepted") < 0 && (document.getElementById("oc-cookie").style.visibility = "visible");
+               function myFunction() {
+               document.getElementById("oc-cookie").style.visibility = "hidden";
+               }
+               </script>
+               ]]>
+         </add>
+      </operation>
+   </file>
+</modification>

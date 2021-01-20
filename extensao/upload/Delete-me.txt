@@ -1,0 +1,2 @@
+A pasta "Upload" é obrigatória na instalação de extensões no Opencart.
+Este arquivo pode ser removido em segurança.
